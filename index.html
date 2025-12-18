@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Shop - Mega Adviento 2025</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold text-warning" href="#">🔥 GLOBAL SHOP</a>
+            <button class="btn btn-outline-warning btn-sm position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartCanvas">
+                🛒 Carrito
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="alert header-alert m-0 rounded-0">
+        ⚡ ¡Darse prisa! Las ofertas de Adviento caducan en <span id="timer">02:14:59</span>
+    </div>
+
+    <div class="container mt-4">
+        <div id="promoCarousel" class="carousel slide mb-4 rounded overflow-hidden shadow" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active bg-danger text-white p-4 text-center">
+                    <h2 class="fw-bold">ENVÍO GRATIS ✈️</h2>
+                    <p class="m-0">En todos los pedidos superiores a €10</p>
+                </div>
+                <div class="carousel-item bg-primary text-white p-4 text-center">
+                    <h2 class="fw-bold">SUPER CUPONES 🎟️</h2>
+                    <p class="m-0">Acumulables con otras ofertas</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="advent-grid" id="calendar-container"></div>
+    </div>
+
+    <div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="modalTitle">Oferta Especial</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <div id="modalEmoji" style="font-size: 5rem;">🎁</div>
+                    <h3 class="mt-2 text-danger fw-bold" id="modalPrice">€0.00</h3>
+                    
+                    <div class="coupon-box" id="modalCoupon">CODE123</div>
+                    <button class="btn-buy" onclick="alert('¡Añadido al carrito!')">¡COMPRAR AHORA!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="cartCanvas">
+        <div class="offcanvas-header bg-dark text-white">
+            <h5 class="offcanvas-title">Tu Cesta</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <p>Tu carrito está reservado por 15:00 min.</p>
+            <button class="btn btn-warning w-100 fw-bold">PAGAR AHORA</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
